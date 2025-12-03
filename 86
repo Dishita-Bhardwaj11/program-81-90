@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    char str[1000];
+    fgets(str, 1000, stdin);
+
+    int len = 0;
+    while (str[len] != '\0' && str[len] != '\n') len++;
+
+    int start = 0, end = len - 1;
+
+    while (start < end) {
+        if (str[start] != str[end]) {
+            printf("Not palindrome");
+            return 0;
+        }
+        start++;
+        end--;
+    }
+
+    printf("Palindrome");
+    return 0;
+}

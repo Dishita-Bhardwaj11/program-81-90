@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    char str[1000];
+    fgets(str, 1000, stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == '\n') break;
+        printf("%c\n", str[i]);
+    }
+
+    return 0;
+}
